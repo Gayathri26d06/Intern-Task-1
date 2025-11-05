@@ -1,0 +1,194 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar */
+header {
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  transition: 0.3s;
+  z-index: 1000;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d16ba5;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #d16ba5;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.btn {
+  background: #d16ba5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #a83279;
+}
+
+/* Products Section */
+.products {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 20px;
+  justify-items: center; /* center each card */
+  margin-top: 30px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 250px; /* ensures uniform size */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+  color: #9e0a5e;
+}
+
+.product-card span {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* About Section */
+.about {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fef6f9;
+}
+.about h2 {
+  margin-bottom: 20px;
+  color: #a83279;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 60px 20px;
+  text-align: center;
+}
+.testimonial-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.testimonial {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-style: italic;
+}
+
+/* Newsletter */
+.newsletter {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fef6f9;
+}
+.newsletter form {
+  margin-top: 20px;
+}
+.newsletter input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #d16ba5;
+  color: white;
+}
+footer a {
+  color: white;
+  margin: 0 5px;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Product Grid */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* 1 card per row on mobile */
+  }
+}
